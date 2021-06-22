@@ -1,0 +1,26 @@
+{
+  "id": "7af441b0-6a31-4802-8c36-5085bf2a7616",
+  "name": "Bokstore Base 210621",
+  "publisher": "get&use Academy GmbH",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://BokstoreBase210621.com/help/",
+  "showMyCode": true,
+  "runtime": "7.0"
+}
