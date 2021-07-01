@@ -13,7 +13,4 @@ codeunit 50100 "BSB Subscriber Store"
                 Rec."No.",
                 rec.Name);
     end;
-
-
-
 }

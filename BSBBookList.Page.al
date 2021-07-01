@@ -1,6 +1,6 @@
 page 50101 "BSB Book List"
 {
-    Caption = 'Book List';
+    Caption = 'Books';
     PageType = List;
     Editable = false;
     SourceTable = "BSB Book";
