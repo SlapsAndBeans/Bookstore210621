@@ -51,5 +51,7 @@ report 50100 "BSB Book List"
     }
 
     var
+#pragma warning disable AA0204
         ShowNoOfPages: Boolean;
+#pragma warning restore AA0204
 }

@@ -60,7 +60,24 @@ page 50101 "BSB Book List"
                 ToolTip = 'Executes the Create Demo Books action';
                 RunObject = codeunit "BSB Create Books";
             }
+            action(Evaluation)
+            {
+                Caption = 'Evaluation';
+                Image = Evaluate;
+                ApplicationArea = All;
+                ToolTip = 'Executes the Evaluation action';
+
+                trigger OnAction()
+                begin
+                    // BSBBookTypeInterface := BSBBookTypeMgmt.GetHandler(Rec);
+                    // BSBBookTypeInterface.GetEvaluation();
+                    BSBBookTypeMgmt.GetHandler(Rec).GetEvaluation();
+                end;
+            }
         }
     }
+    var
+        BSBBookTypeMgmt: Codeunit "BSB Book Type Mgmt.";
+        BSBBookTypeInterface: Interface "BSB Book Type Evaluation";
 
 }

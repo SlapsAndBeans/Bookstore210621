@@ -118,7 +118,12 @@ table 50100 "BSB Book"
     end;
 
     trigger OnDelete()
+    var
+        Handled: Boolean;
     begin
+        OnBeforeDeleteBook(Rec, Handled);
+        if Handled then
+            exit;
         Error(OnDeletErr, TableCaption);
     end;
 
@@ -127,4 +132,10 @@ table 50100 "BSB Book"
         TestField(Blocked, false);
     end;
 
+    [IntegrationEvent(false, false)]
+#pragma warning disable AA0072
+    local procedure OnBeforeDeleteBook(Rec: Record "BSB Book"; var Handled: Boolean)
+#pragma warning restore AA0072
+    begin
+    end;
 }

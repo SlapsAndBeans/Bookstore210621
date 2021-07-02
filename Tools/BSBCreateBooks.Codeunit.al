@@ -8,21 +8,21 @@ codeunit 50149 "BSB Create Books"
     end;
 
     var
-        Book: Record "BSB Book";
+        BSBBook: Record "BSB Book";
 
     local procedure CreateBook(Int: Integer)
     var
         Suffix: Text;
     begin
-        Book.Init();
-        Suffix := format(int);
-        if not Book.Get('B' + Suffix) then Book."No." := 'B' + Suffix;
-        Book.Validate(Description, 'Buch ' + Suffix);
-        Book.Author := 'Autor ' + Suffix;
-        Book.ISBN := Suffix;
-        Book."No. of Pages" := Int * 10;
-        Book.Type := int mod 3;
-        Book."Date of Publishing" := Today() + Int;
-        if not Book.insert(true) then Book.Modify(true);
+        // BSBBook.Init();
+        // Suffix := format(int);
+        // if not BSBBook.Get('B' + Suffix) then BSBBook."No." := 'B' + Suffix;
+        // BSBBook.Validate(Description, 'Buch ' + Suffix);
+        // BSBBook.Author := 'Autor ' + Suffix;
+        // BSBBook.ISBN := Suffix;
+        // BSBBook."No. of Pages" := Int * 10;
+        // BSBBook.Type := int mod 3;
+        // BSBBook."Date of Publishing" := Today() + Int;
+        // if not BSBBook.insert(true) then BSBBook.Modify(true);
     end;
 }
